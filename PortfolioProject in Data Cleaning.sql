@@ -37,7 +37,7 @@ Select n.ParcelID, n.PropertyAddress, a.ParcelID, a.PropertyAddress, ISNULL(n.Pr
 From PortfolioProject.dbo.NashvilleHousing n
 Join PortfolioProject.dbo.NashvilleHousing a
 	On n.ParcelID = a.ParcelID
-	And	n.[UniqueID ] <> a.[UniqueID ]
+	And n.[UniqueID] <> a.[UniqueID]
 Where n.PropertyAddress is null
 
 
@@ -46,7 +46,7 @@ Set PropertyAddress = ISNULL(n.PropertyAddress, a.PropertyAddress)
 From PortfolioProject.dbo.NashvilleHousing n
 Join PortfolioProject.dbo.NashvilleHousing a
 	On n.ParcelID = a.ParcelID
-	And	n.[UniqueID ] <> a.[UniqueID ]
+	And n.[UniqueID] <> a.[UniqueID]
 Where n.PropertyAddress is null
 
 
